@@ -109,6 +109,7 @@ function getRandomConfirmationMessage() {
     return getRandomMessage(confirmationMessages);
 }
 
+//https://css-tricks.com/adding-particle-effects-to-dom-elements-with-canvas/
 function createTextShards(text, inputElement) {
     const inputRect = inputElement.getBoundingClientRect();
     const words = text.split(' ');
@@ -142,7 +143,7 @@ function createTextShards(text, inputElement) {
                 shard.style.top = `${targetY}px`;
                 shard.style.opacity = '0';
                 shard.style.transform = 'scale(0.1)';
-            }, index * 200);
+            }, index * 200 );
         }
     });
     
@@ -210,7 +211,7 @@ function feedFrog() {
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('stressInput');
     input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' && !e.shiftKey) {
+        if (e.key === 'Enter' && !e.shiftKey) { 
             e.preventDefault();
             feedFrog();
         }
