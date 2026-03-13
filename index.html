@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Frog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splashScreen">
+        <h1 id="splashTitle">HUNGRY FROG</h1>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div id="gameScreen" style="display: none;">
+        <h1 id="gameTitle">HUNGRY FROG</h1>
+        
+        <p id="subtitle">Feed the frog your bad thoughts</p>
+        
+        <div id="feedCounter">You've fed the frog 0 times</div>
+        
+        <div id="frogContainer">
+            <img id="frog" src="img/Frog-default.png" alt="Hungry Frog">
+        </div>
+        
+        <div id="inputContainer">
+            <input type="text" id="userInput" placeholder="Enter your bad thoughts here...">
+            <button id="submitBtn" onclick="feedFrog()">FEED</button>
+        </div>
+        
+        <div id="frogMouth"></div>
+        
+        <div id="confirmation">
+            <p>Thanks for feeding him!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
