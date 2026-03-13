@@ -10,36 +10,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Splash Screen -->
     <div id="splashScreen">
-        <h1 id="splashTitle">HUNGRY FROG</h1>
+        <h1 id="splashTitle">🐸 HUNGRY FROG 🐸</h1>
     </div>
 
-    <!-- Main Game Screen -->
+    <!-- Game Screen -->
     <div id="gameScreen" style="display: none;">
-        <h1 id="gameTitle">HUNGRY FROG</h1>
-        
-        <p id="subtitle">Feed the frog your bad thoughts</p>
-        
-        <div id="feedCounter">You've fed the frog 0 times</div>
-        
-        <div id="frogContainer">
-            <img id="frog" src="img/Frog-default.png" alt="Hungry Frog">
-        </div>
-        
-        <div id="inputContainer">
-            <input type="text" id="userInput" placeholder="Enter your bad thoughts here...">
-            <button id="submitBtn" onclick="feedFrog()">FEED</button>
-        </div>
-        
-        <div id="frogMouth"></div>
-        
-        <div id="confirmation">
-            <p>Thanks for feeding him!</p>
+        <div class="game-container">
+            <h1 class="title">🐸 HUNGRY FROG 🐸</h1>
+            <p class="subtitle">Feed your stress to the frog!</p>
+            
+            <div class="frog-container">
+                <!-- Main frog image -->
+                <img id="frogImage" src="img/Frog-default.png" alt="Frog" class="frog constantly-jiggling">
+                
+                <!-- Crown accessory -->
+                <div id="frogCrown" class="frog-crown hidden">
+                    <img src="img/Acc-crown.png" alt="Crown" class="crown-image"> 
+
+                </div>
+                
+                <!-- Sword accessory -->
+                <div id="frogSword" class="frog-sword hidden">
+                    <img src="img/Acc-sword.png" alt="Sword" class="sword-image">
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <textarea id="stressInput" placeholder="What's stressing you out today?"></textarea>
+                <button id="feedButton" onclick="feedFrog()">FEED THE FROG</button>
+            </div>
+            
+            <div id="feedCounter" class="counter">You've fed the frog 0 times</div>
+            
+            <div class="evolution-status">
+                <div id="swordStatus" class="accessory-status">🗡️ Sword: Feed 3 times</div>
+                <div id="crownStatus" class="accessory-status">👑 Crown: Feed 5 times</div>
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
+<!-- Image sources: 
+Crown: https://www.vecteezy.com/vector-art/25560519-crown-pixel-8-bit-isolated-on-white-background
+Frog: Pixel Studio Sprite Library 
+Sword: Pixel Studio Dungeon Tileset II Library
+Pixel Studio: https://apps.microsoft.com/detail/9p7xs7vh1r3j?hl=en-US&gl=US-->
